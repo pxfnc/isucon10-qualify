@@ -44,5 +44,5 @@ CREATE TABLE isuumo.chair
     INDEX index_on_width  (width),
     INDEX index_on_price  (price),
     INDEX index_on_color  (color),
-    INDEX index_on_kind   (kind),
+    INDEX index_on_kind   (kind)
 );
