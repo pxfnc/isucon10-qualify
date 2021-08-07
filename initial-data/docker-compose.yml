@@ -4,4 +4,5 @@ services:
     build: "./"
     volumes:
       - ../webapp:/webapp
-    command: "bash -c 'pip install -r requirements.txt && go get github.com/orisano/wayt && make chair_data estate_data'"
+      - ./result:/initial-data/result
+    command: "bash -c 'make chair_data estate_data'"

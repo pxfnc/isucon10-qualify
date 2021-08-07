@@ -1,6 +1,6 @@
 FROM python:3
 
-WORKDIR /workdir
+WORKDIR /initial-data
 
 RUN set -ex && \
     cd /tmp && \
@@ -12,3 +12,6 @@ RUN set -ex && \
 COPY . . 
 
 ENV PATH $PATH:/usr/local/go/bin
+
+RUN pip install -r requirements.txt
+RUN go get github.com/orisano/wayt
